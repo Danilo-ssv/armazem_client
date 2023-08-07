@@ -1,0 +1,36 @@
+header{
+	background-color: #ffa500;
+	color: #fff;
+}
+
+.header-conteiner{
+	height: 12vh;
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header-conteiner nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#user-feature{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+#user-feature:hover{
+	cursor: pointer;
+}
+#user-feature i{
+	font-size: 1.5rem;
+}
+a{
+	margin: 10px;
+	text-decoration: none;
+	color: #fff;
+}

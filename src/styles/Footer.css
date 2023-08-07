@@ -1,0 +1,22 @@
+#footer {
+    width: 100vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+    background-color: #ffa500;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+#footer span{
+	text-align: center;
+}
+#footer i{
+	padding: 0 10px;
+	font-size: 2rem;
+}
+#footer i:hover{
+	transform: scale(1.2);
+}

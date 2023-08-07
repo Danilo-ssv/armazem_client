@@ -1,0 +1,39 @@
+.products-form-conteiner{
+	display: flex;
+	justify-content: space-between;
+}
+
+.search-product-form, .new-product-form{
+	margin: 2em 10px;
+	width: 50%;
+}
+.input-fields{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.products-form-conteiner input{
+	padding: 5px;
+	border-radius: 30px;
+	border: 1px solid #ffa500;
+	outline: none;
+	width: 100%;
+}
+.especial-input{
+	margin-top: 25px;
+}
+.warming{
+	color: red;
+}
+
+@media (width < 750px) {
+	.products-form-conteiner{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.search-product-form, .new-product-form{
+		margin: 0;
+		width: 85%;
+	}
+}
