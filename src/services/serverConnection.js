@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-	baseURL: 'https://armazem-server.vercel.app',
+	baseURL: process.env.REACT_APP_APICONNECTION,
 })

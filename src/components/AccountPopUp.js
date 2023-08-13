@@ -13,8 +13,8 @@ function AccountPopUp() {
 	function loggout() {
 		if(isOpen) { setIsOpen() }
 		localStorage.setItem('token', null)
-		queryClient.invalidateQueries(['products'])
 		Navigate('/login')
+		queryClient.invalidateQueries(['products'])
 	}
 
 	function onClick(event) {
