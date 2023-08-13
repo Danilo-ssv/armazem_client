@@ -18,12 +18,11 @@ function Home() {
 		keepPreviousData: true,
 		queryFn: () => getProducts(page, localStorage.getItem('token')),
 	})
-
-	if(productsQuery.status === 'loading')
+	
+	if(productsQuery.isLoading)
 		return (<h1>Carregando...</h1>)
-	if(productsQuery.status === 'error'){
-		if(productsQuery.error.response.data === 'INVALID_TOKEN')
-			return (<Navigate to='/login' />)
+	if(productsQuery.data.invalidToken){
+		return (<Navigate to='/login' />)
 	}
 	
 	return(

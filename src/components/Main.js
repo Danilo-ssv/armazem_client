@@ -25,7 +25,7 @@ function Main({ data, hasSearchParam, hasPages, page, inc, dec }) {
 		})
 		setIsOpen()
 	}
-	console.log(data)
+
 	return(
 		<main>
 			<div className='products-form-conteiner'>
