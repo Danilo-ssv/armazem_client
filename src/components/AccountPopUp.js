@@ -12,7 +12,7 @@ function AccountPopUp() {
 	const queryClient = useQueryClient()
 	function loggout() {
 		if(isOpen) { setIsOpen() }
-		localStorage.setItem('token', null)
+		localStorage.removeItem('token')
 		Navigate('/login')
 		queryClient.invalidateQueries(['products'])
 	}
