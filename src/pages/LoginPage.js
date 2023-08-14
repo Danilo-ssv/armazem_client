@@ -21,7 +21,6 @@ function LoginPage() {
 		mutationFn: login,
 		onSuccess: data => {
 			if(data.isAuthenticated){
-				queryClient.invalidateQueries(['products'])
 				localStorage.setItem('token', data.token)
 				Navigate('/')
 			}
