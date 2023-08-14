@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import '../styles/LoginPage.css'
 
 import { login } from '../services/requests/applicationRequests'
 
 function LoginPage() {
-	const Navigate = useNavigate()
 	const [isOpen, setIsOpen] = useState(false)
 	const [loginForm, setLoginForm] = useState({
 		account: '',
@@ -22,7 +20,7 @@ function LoginPage() {
 		onSuccess: data => {
 			if(data.isAuthenticated){
 				localStorage.setItem('token', data.token)
-				Navigate('/')
+				window.location.pathname = '/'
 			}
 		},
 	})
