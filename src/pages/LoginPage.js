@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import '../styles/LoginPage.css'
 
 import { login } from '../services/requests/applicationRequests'
 
 function LoginPage() {
+	const Navigate = useNavigate()
 	const [isOpen, setIsOpen] = useState(false)
 	const [loginForm, setLoginForm] = useState({
 		account: '',
@@ -21,14 +22,11 @@ function LoginPage() {
 		onSuccess: data => {
 			if(data.isAuthenticated){
 				queryClient.invalidateQueries(['products'])
-				return localStorage.setItem('token', data.token)
+				localStorage.setItem('token', data.token)
+				Navigate('/')
 			}
-				
 		},
 	})
-
-	if(loginMutation.isSuccess)
-		return (<Navigate to='/' />)
 
 	function onSubmit(event) {
 		event.preventDefault()
